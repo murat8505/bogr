@@ -23,7 +23,7 @@ public class ApplicationEx extends Application {
 
 	@Override
 	public void onCreate() {
-		/**/if (Log.isLoggable(Constants.LOG_TAG_MAIN, Log.DEBUG))
+		if (Log.isLoggable(Constants.LOG_TAG_MAIN, Log.DEBUG))
 			Log.d(TAG, "onCreate");
 		super.onCreate();
 		httpClient = createHttpClient();
@@ -31,7 +31,7 @@ public class ApplicationEx extends Application {
 
 	@Override
 	public void onLowMemory() {
-		/**/if (Log.isLoggable(Constants.LOG_TAG_MAIN, Log.DEBUG))
+		if (Log.isLoggable(Constants.LOG_TAG_MAIN, Log.DEBUG))
 			Log.d(TAG, "onLowMemory)");
 		super.onLowMemory();
 		shutdownHttpClient();
@@ -39,14 +39,14 @@ public class ApplicationEx extends Application {
 
 	@Override
 	public void onTerminate() {
-		/**/if (Log.isLoggable(Constants.LOG_TAG_MAIN, Log.DEBUG))
+		if (Log.isLoggable(Constants.LOG_TAG_MAIN, Log.DEBUG))
 			Log.d(TAG, "onTerminate");
 		super.onTerminate();
 		shutdownHttpClient();
 	}
 
 	private HttpClient createHttpClient() {
-		/**/if (Log.isLoggable(Constants.LOG_TAG_MAIN, Log.DEBUG))
+		if (Log.isLoggable(Constants.LOG_TAG_MAIN, Log.DEBUG))
 			Log.d(TAG, "createHttpClient()");
 
 		HttpParams params = new BasicHttpParams();
@@ -65,13 +65,13 @@ public class ApplicationEx extends Application {
 	}
 
 	public HttpClient getHttpClient() {
-		/**/if (Log.isLoggable(Constants.LOG_TAG_MAIN, Log.DEBUG))
+		if (Log.isLoggable(Constants.LOG_TAG_MAIN, Log.DEBUG))
 			Log.d(TAG, "getHttpClient()");
 		return httpClient;
 	}
 
 	private void shutdownHttpClient() {
-		/**/if (Log.isLoggable(Constants.LOG_TAG_MAIN, Log.DEBUG))
+		if (Log.isLoggable(Constants.LOG_TAG_MAIN, Log.DEBUG))
 			Log.d(TAG, "shutdownHttpClient()");
 		if (httpClient != null && httpClient.getConnectionManager() != null) {
 			httpClient.getConnectionManager().shutdown();

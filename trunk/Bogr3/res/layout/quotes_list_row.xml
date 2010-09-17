@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" 
+    android:orientation="horizontal" 
+    android:id="@+id/list_row" 
+    android:layout_height="fill_parent"        
+    >
+    
+    
+  <ImageView android:layout_width="wrap_content" 
+  android:id="@+id/unread_row" 
+  android:layout_height="fill_parent" 
+  android:layout_gravity="top" 
+  android:paddingRight="3px" 
+  android:scaleType="fitXY" 
+  android:src="@drawable/new_indicator" 
+  android:paddingTop="3px" android:paddingBottom="3px" android:visibility="invisible"></ImageView><LinearLayout 
+    android:layout_height="wrap_content"
+    android:orientation="vertical"     
+    android:layout_width="fill_parent" android:padding="2px">
+      
+    <LinearLayout 
+    	android:orientation="horizontal" 
+    	android:layout_width="fill_parent"    	
+    	android:layout_height="wrap_content" android:id="@+id/linear_title">
+    	
+      
+        <TextView 
+        android:id="@+id/list_row_title" 
+        android:layout_height="wrap_content" 
+        android:textSize="16sp" 
+        android:textStyle="bold" 
+        android:text="Title" 
+        android:layout_width="wrap_content" android:layout_gravity="top">                
+        </TextView>
+        <TextView 
+        android:id="@+id/list_row_pubdate" 
+        android:layout_height="wrap_content" 
+        android:textSize="10sp" 
+        android:layout_width="wrap_content" 
+        android:layout_weight="1" android:layout_marginLeft="15px" android:layout_gravity="top" android:text="bubdate">                
+        </TextView>
+            <ImageView
+            	 android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:maxHeight="15px" 
+                android:maxWidth="15px" 
+                android:minHeight="15px" 
+                android:minWidth="15px" 
+                android:src="@android:drawable/star_off" android:layout_gravity="top" android:id="@+id/list_row_imgstar">
+            </ImageView>                  
+        </LinearLayout>    	
+    	<TextView 
+    	android:layout_height="wrap_content" 
+        android:layout_width="fill_parent" 
+        android:textSize="12sp" android:text="Body" android:id="@+id/list_row_body">
+        </TextView>
+        
+  
+</LinearLayout>        
+
+</LinearLayout>

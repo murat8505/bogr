@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sources version="1.9.150910">
+	<source
+		lock="false"
+		group="БАШ bash.org.ru" 
+		number="301" 
+		name="Последние цитаты" 
+		title="Последние" 
+		info="bash.org.ru/"
+		charset=""	
+		encopy="true" enfav="true"
+		defenable="true" 
+		shownew="true"
+		searchval="@val"	
+		urlsource="http://bash.org.ru/" 
+		urlsearch="http://bash.org.ru/?text=@val"
+		urlpage="http://bash.org.ru/index/@val" 
+		urlitem="http://bash.org.ru/quote/@val">	
+		<regexpr 
+			type="Content" 
+			posnumber="2" 
+			posdate="4" 
+			postext="10"><![CDATA[(/quote/(\d+)"|/abyss/(\d+)/r)(?:.*?)((\d{4}-\d{2}-\d{2})((\sв\s)|(\s*))(\d{2}:\d{2}))(?:.*?)(<div>(?!<)(.*?)</div>)]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<span>(?:\d+)</span><a href="/index/(\d+)">]]></regexpr>		
+	</source>
+	<source
+		group="БАШ bash.org.ru" 
+		number="302" 
+		name="Случайные цитаты" 
+		title="Случайные" 
+		info="bash.org.ru/random/"
+		charset=""	
+		defenable="true" 
+		encopy="true" enfav="true"
+		shownew="true"
+		searchval="@val"	
+		urlsource="http://bash.org.ru/random"
+		urlpage="http://bash.org.ru/random"
+		urlsearch="http://bash.org.ru/?text=@val"
+		urlitem="http://bash.org.ru/quote/@val">
+		<regexpr 
+			type="Content" 
+			posnumber="2" 
+			posdate="4" 
+			postext="10"><![CDATA[(/quote/(\d+)"|/abyss/(\d+)/r)(?:.*?)((\d{4}-\d{2}-\d{2})((\sв\s)|(\s*))(\d{2}:\d{2}))(?:.*?)(<div>(?!<)(.*?)</div>)]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[(?:/quote/(\d+))]]></regexpr>		
+	</source>
+	<source
+		group="БАШ bash.org.ru" 
+		number="303" 
+		name="Лучшие цитаты" 
+		encopy="true" enfav="true"
+		title="Лучшие цитаты" 
+		info="bash.org.ru/best"
+		charset=""	
+		defenable="true" 
+		shownew="false"
+		searchval="@val"	
+		urlsource="http://bash.org.ru/best"
+		urlsearch="http://bash.org.ru/?text=@val"
+		urlitem="http://bash.org.ru/quote/@val">
+		<regexpr 
+			type="Content" 
+			posnumber="2" 
+			posdate="4" 
+			postext="10"><![CDATA[(/quote/(\d+)"|/abyss/(\d+)/r)(?:.*?)((\d{4}-\d{2}-\d{2})((\sв\s)|(\s*))(\d{2}:\d{2}))(?:.*?)(<div>(?!<)(.*?)</div>)]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>				
+	</source>
+	<source
+		group="БАШ bash.org.ru" 
+		number="304" 
+		name="Цитаты по рейтингу" 
+		title="По рейтингу" 
+		info="bash.org.ru/"
+		charset=""	
+		defenable="true" 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://bash.org.ru/byrating" 
+		urlsearch="http://bash.org.ru/?text=@val"
+		urlpage="http://bash.org.ru/byrating/@val" 
+		urlitem="http://bash.org.ru/quote/@val">	
+		<regexpr 
+			type="Content" 
+			posnumber="2" 
+			posdate="4" 
+			postext="10"><![CDATA[(/quote/(\d+)"|/abyss/(\d+)/r)(?:.*?)((\d{4}-\d{2}-\d{2})((\sв\s)|(\s*))(\d{2}:\d{2}))(?:.*?)(<div>(?!<)(.*?)</div>)]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<span>(?:\d+)</span><a href="/byrating/(\d+)">]]></regexpr>			
+	</source>
+	<source
+		group="БАШ bash.org.ru" 
+		number="305" 
+		name="Бездна" 
+		title="Бездна"
+		info="bash.org.ru/abyss/"
+		charset=""	
+		defenable="true" 
+		shownew="false"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://bash.org.ru/abyss/" 
+		urlsearch1="http://bash.org.ru/abyss?text=@val"
+		urlpage="http://bash.org.ru/abyss?@val">
+	
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[<span id="v(\d+)">(?:.*?)(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2})(?:.*?)<div>(?!<)(.*?)</div>]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[(?:"/abyss\?(\d+)")]]></regexpr>
+		<regexpr type="Search1"><![CDATA[<b>(\d+):</b>(?:.*?)(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2})(?:.*?)(<div>(?!<)(.*?)</div>)]]></regexpr>	
+			
+	</source>
+		<source
+		group="БАШ bash.org.ru" 
+		number="306" 
+		name="Top Бездны"
+		title="Top Бездны" 
+		info="bash.org.ru/abysstop"
+		charset=""	
+		defenable="true" 
+		shownew="false"
+		encopy="true" enfav="true"		
+		searchval="@val"	
+		urlsource="http://bash.org.ru/abysstop/" 
+		>
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="4"><![CDATA[<b>(\d+):</b>(?:.*?)(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2})(?:.*?)(<div>(?!<)(.*?)</div>)]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>			
+	</source>
+	<source
+		group="БАШ bash.org.ru" 
+		number="307" 
+		name="Лучшее цитаты Бездны" 
+		title="Лучшее Бездны" 
+		info="bash.org.ru/abyssbest"
+		charset=""	
+		defenable="true" 
+		shownew="false"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://bash.org.ru/abyssbest" 
+		urlsearch="http://bash.org.ru/abyssbest?text=@val"
+		urlpage="http://bash.org.ru/abyssbest/@val">
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="8"><![CDATA[<b>(\d+)</b>(?:.*?)((\d{4}-\d{2}-\d{2})((\sв\s)|(\s*))(\d{2}:\d{2}))(?:.*?)<div>(?!<)(.*?)</div>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<span>(?:\d+)</span><a href="/abyssbest/(\d+)">]]></regexpr>	
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>			
+	</source>
+	<source		
+		group="QDB Bash.org" 
+		number="308" 
+		name="QDB Latest" 
+		title="QDB Latest" 
+		info="bash.org/?latest"
+		charset=""	
+		defenable="false" 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://bash.org/?latest" 
+		urlsearch="http://bash.org/?search=@val"
+		urlitem="http://bash.org/?@val">	
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[<p class="quote"><a href="(?:.*?)><b>#(\d+)</b></a>(\s)(?:.*?)<p class="qt">(.*?)</p>]]></regexpr>
+		<regexpr type="Error"><![CDATA[<center><font class="bodytext">(.*?)</font></center><BR></td>]]></regexpr>		
+	</source>
+		<source		
+		group="QDB Bash.org" 
+		number="309" 
+		name="QDB Random" 
+		title="QDB Random" 
+		info="bash.org/?random"
+		charset=""	
+		defenable="false" 
+		encopy="true" enfav="true"
+		shownew="false"
+		searchval="@val"	
+		urlsource="http://bash.org/?random" 
+		urlsearch="http://bash.org/?search=@val"
+		urlitem="http://bash.org/?@val">	
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[<p class="quote"><a href="(?:.*?)><b>#(\d+)</b></a>(\s)(?:.*?)<p class="qt">(.*?)</p>]]></regexpr>
+		<regexpr type="Error"><![CDATA[<center><font class="bodytext">(.*?)</font></center><BR></td>]]></regexpr>		
+	</source>	
+	<source
+		group="Другие" 
+		number="310" 
+		name="IT Happens" 
+		title="IT Happens" 
+		info="ithappens.ru — IT вести с фронтов"
+		charset=""	
+		defenable="false" 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://ithappens.ru/" 		
+		urlpage="http://ithappens.ru/page/@val"
+		urlitem="http://ithappens.ru/story/@val">	
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="3" 
+			postext="4"><![CDATA[(?:/story/(\d+)")(.*?)(?:<p class="date">)(.*?)(?:<p class)(?:.*?)(?:<p class="text">)(.*?)(?:</p>)]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<span class="cur"><b>(?:\d+)</b></span><span><a href="/page/(\d+)">]]></regexpr>		
+	</source>	
+	<source
+		group="Другие"
+		number="313" 
+		name="Дети говорят" 
+		title="Дети говорят" 
+		info="det.org.ru  —  дети жгут"
+		charset=""	
+		defenable="false" 
+		encopy="true" enfav="true"
+		shownew="true"
+		searchval="@val"	
+		urlsource="http://det.org.ru/" 		
+		urlpage="http://det.org.ru/?p=@val"
+		urlitem="http://det.org.ru/?quote=@val">	
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[det.org.ru/q/(\d+)';">(?:.*?)href="\?date=(\d{2}.\d{2}.\d{4})"(?:.*?)<div class="history">(.*?)</div>]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<span class="activ">(?:\d+)</span>(?:.*?)<a href="\?&p=(\d+)" class="sel">]]></regexpr>		
+	</source>
+	<source
+		group="Другие"
+		number="314" 
+		name="^НЯ.Ш^" 
+		title="НЯ.Ш" 
+		info="nya.sh — для анимешников"
+		charset=""	
+		defenable="false" 
+		encopy="true" enfav="true"
+		shownew="true"
+		searchval="@val"	
+		urlsource="http://nya.sh/" 		
+		urlpage="http://nya.sh/page/@val"
+		urlitem="http://nya.sh/post/@val">	
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[<a href="/post/(\d+)">(?:.*?)(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2})</i></div>(.*?)<div align="left" class="q">]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<b>(?:\d+)</b>\s<a href="/page/(\d+)">]]></regexpr>		
+	</source>
+	<source
+		group="Другие"
+		number="316" 
+		name="УкрБаш" 
+		title="УкрБаш" 
+		info="ukrbash.org — по просьбе братского народа"
+		charset="UTF-8"
+		defenable="false" 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://ukrbash.org/" 		
+		urlpage="http://ukrbash.org/quotes/@val"
+		urlitem="http://ukrbash.org/quote/@val">			
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[<a href="/quote/(\d+)"(?:.*?)\s(\d{2}.\d{2}.\d{4}\s\d{2}:\d{2})'>(?:.*?)</div><div class="text">(.*?)</div></div></div>]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<span class="current">(?:\d+)</span><a href="/quotes/(\d+)"]]></regexpr>		
+	</source>
+	<source
+		group="Другие"
+		number="317" 
+		name="БайБаш" 
+		title="БайБаш" 
+		info="bash.org.by - Цитатник Байнета"
+		charset=""
+		defenable="false" 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://bash.org.by/index.php" 		
+		urlpage="http://bash.org.by/index.php?page=@val"
+		urlitem="http://bash.org.by/index.php?id=@val">			
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[id=(\d+)">(?:.*?)Approved(?:.*?),\s(\d{2}.\d{2}.\d{4}(?:.*?)\d{2}:\d{2}:\d{2})(?:.*?)<tr><td colspan="2" class="content">(.*?)</td></tr>]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<span class="current">(?:\d+)</span><a href="/quotes/(\d+)"]]></regexpr>		
+	</source>
+	<source
+		group="Другие"
+		number="319" 
+		name="iBash" 
+		title="iBash" 
+		info="ibash.org.ru — Новый цитатник Рунета"
+		charset="windows-1251"
+		defenable="false" 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://ibash.org.ru/"
+		urlpage="http://ibash.org.ru/?page=@val"		
+		urlitem="http://ibash.org.ru/quote.php?id=@val">			
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[<div class="quote">(?:.*?)#(\d+)</b></a></span>(\s)<span>(?:.*?)<div class="quotbody">(.*?)</div>]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[\s\s(?:\d)\s\s<a href="/\?page=(?:\d+)">(\d+)</a>]]></regexpr>		
+	</source>
+	<source
+		group="Негатив и позитив"
+		number="311" 
+		name="Килл Ми Плз!" 
+		title="Килл Ми Плз!" 
+		info="killmepls.ru — Кажется, что жизнь повернулась спиной? Поверьте, бывает и хуже..."
+		charset=""	
+		defenable="false"		 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://killmepls.ru/" 		
+		urlpage="http://killmepls.ru/page/@val"
+		urlitem="http://killmepls.ru/story/@val">	
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[(?:/story/(\d+)"\sclass="perm">)#(?:.*?);\s(.*?)</a>(?:.*?)<div class="fi_text">(.*?)</div>]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[class="pagina">(?:\d+)(?:.*?)href="/page/(\d+)]]></regexpr>		
+	</source>
+	<source
+		group="Негатив и позитив" 
+		number="312" 
+		name="Задолба!Ли" 
+		title="Задолба!Ли" 
+		info="zadolba.li — манагеры и кто рядом ноют"
+		charset=""	
+		defenable="false" 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://zadolba.li/" 		
+		urlpage="http://zadolba.li/page/@val"
+		urlitem="http://zadolba.li/story/@val">	
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[<span class="number">#(\d+)</span>(?:.*?)<p class="timestamp">(.*?)</p>(?:.*?)<p class="the">(.*?)</p>]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<strong>(?:\d+)</strong><a href="/page/(\d+)">]]></regexpr>		
+	</source>
+	<source
+		group="Негатив и позитив"
+		number="315" 
+		name="Нефарт.ру" 
+		title="Нефарт.ру" 
+		info="nefart.ru — Вот такой не фарт!"
+		charset="UTF-8"	
+		defenable="false" 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://nefart.ru/" 		
+		urlpage="http://nefart.ru/?page=@val"
+		urlitem="http://nefart.ru/@val">	
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[#(\d+)</a><span>(\d{2}.\d{2}.\d{4}\s-\s\d{2}:\d{2})(?:.*?)</h3>(.*?)<a href="http://nefart.ru/">]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<strong>(?:\d+)</strong>\s+<a\shref="\?page=(\d+)">]]></regexpr>		
+	</source>
+	<source
+		group="Негатив и позитив"
+		number="318" 
+		name="Пипец" 
+		title="Пипец" 
+		info="Pip.ec — Сегодня был пипец, но это не конец"
+		charset=""
+		defenable="false" 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://pip.ec/recent/all/" 		
+		urlpage="http://pip.ec/recent/all/@val"
+		urlitem="http://pip.ec/@val">			
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[#(\d+)</a>(?:.*?)<span class = 'story_grey'>(.*?)<a href='/(?:.*?)id='pip_(?:\d+)'><p>(.*?)</p>]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<a href = '/recent/all/(\d+)'>&rarr;</a>]]></regexpr>		
+	</source>				
+	<source
+		group="Негатив и позитив"
+		number="320" 
+		name="Деньги на ветер" 
+		title="Деньги на ветер" 
+		info="www.denginaveter.ru — Не купить вещь приятнее, чем её купить"
+		charset="UTF-8"
+		defenable="false" 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="www.denginaveter.ru"
+		urlpage="http://www.denginaveter.ru/?page=@val">			
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="3" 
+			postext="2"><![CDATA[(\d+)"\sclass="oldlink">(.*?)</a>(?:.*?)<p style="margin-top:2px;">(.*?)\s-\s<a class="liencat"]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<strong>(?:\d+?)</strong>&nbsp;&nbsp;<a href='http://www\.denginaveter\.ru/\?page=(\d+)]]></regexpr>		
+	</source>
+	<source
+		group="Негатив и позитив"
+		number="321" 
+		name="Свезло.нет" 
+		title="Свезло.нет" 
+		info="svezlo.net — Поделись своей удачей!"
+		charset="UTF-8"
+		defenable="false" 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://svezlo.net/"
+		urlpage="http://svezlo.net/?page=@val"
+		urlitem="http://svezlo.net/site/post/@val">	
+		<regexpr 
+			type="Content" 
+			posnumber="1" 
+			posdate="2" 
+			postext="3"><![CDATA[post/(?:\d+)?">#(\d+)</a>(?:.*?)<span>(\d{2}.\d{2}.\d{4} - \d{2}:\d{2})</span>(?:.*?)_content">(.*?)</div>]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<a href="/\?page=(\d+)" class="next_page" rel="next">]]></regexpr>				
+	</source>
+	<source
+		group="Негатив и позитив"
+		number="322" 
+		name="Дело не в тебе" 
+		title="Дело не в тебе" 
+		info="delonevtebe.ru — Неудачные свидания"
+		charset="UTF-8"
+		defenable="false" 
+		shownew="true"
+		encopy="true" enfav="true"
+		searchval="@val"	
+		urlsource="http://delonevtebe.ru/"
+		urlpage="http://delonevtebe.ru/page/@val"
+		urlitem="http://delonevtebe.ru/story/@val">	
+		<regexpr 
+			type="Content" 
+			posnumber="3" 
+			posdate="1" 
+			postext="2"><![CDATA[<span\sclass="chronodata">(?:.*?)(\d{1,2}\s(?:.*?)\s\d{4})</span>(?:.*?)<div\sclass="itemtext">(.*?)<span\sid="voteid(\d+)">]]></regexpr>
+		<regexpr type="Error"><![CDATA[<span class="error first">(.*?)</span>]]></regexpr>
+		<regexpr type="Next"><![CDATA[<a href="http://delonevtebe\.ru/page/(\d+)" ><span>&laquo;</span>]]></regexpr>		
+	</source>
+</sources>
